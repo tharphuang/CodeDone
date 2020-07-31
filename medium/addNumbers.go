@@ -1,7 +1,5 @@
 package medium
 
-import "fmt"
-
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -41,17 +39,15 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	return head.Next
 }
 
-func TestAddTwoNumbers() {
-	l1 := &ListNode{1, nil}
-	l1.Next = &ListNode{9, nil}
-	l1.Next.Next = &ListNode{9, nil}
+/**
+ *链表逆打印
+ */
 
-	l2 := &ListNode{9, nil}
-
-	l := AddTwoNumbers(l1, l2)
-	for l != nil {
-		fmt.Print(l.Val)
-		l = l.Next
+func reversePrint(head *ListNode) []int {
+	var list []int
+	for head != nil {
+		list = append([]int{head.Val}, list...)
+		head = head.Next
 	}
-	return
+	return list
 }

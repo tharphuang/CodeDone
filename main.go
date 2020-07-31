@@ -7,7 +7,7 @@ import (
 
 func main() {
 	//medium.TestAddTwoNumbers()
-	medium.TestLenOfLongestS()
+	medium.TestnumW()
 	//simple.TestTwosum()
 
 }

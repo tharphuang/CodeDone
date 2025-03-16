@@ -1,17 +1,13 @@
-package main
+package simple
 
-import "fmt"
-
-//"test/simple"
-
-func qStort(arr []int) {
+func qSort(arr []int) {
 	if len(arr) < 2 {
 		return
 	}
 
 	idx := partition(arr)
-	qStort(arr[:idx])
-	qStort(arr[idx+1:])
+	qSort(arr[:idx])
+	qSort(arr[idx+1:])
 }
 
 func partition(arr []int) int {
@@ -27,9 +23,8 @@ func partition(arr []int) int {
 	return i
 }
 
-func main() {
-	a := []int{1, 3, 9, 34, 6, 8, 5}
-	qStort(a)
-	fmt.Println(a)
-
-}
+// func main() {
+// 	a := []int{1, 3, 9, 34, 6, 8, 5}
+// 	qSort(a)
+// 	fmt.Println(a)
+// }
